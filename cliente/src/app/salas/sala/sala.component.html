@@ -1,0 +1,50 @@
+<button class="btn btn-default" routerLink="/"> Volver atrás </button>
+<div *ngIf="!sala">Cargando sala...</div>
+<div *ngIf="sala">
+    <p><strong>Nombre de la sala: <span class="text-danger">{{sala.nombre}}</span></strong></p>
+    <div *ngIf="nombre">
+        <div class="{{ resultado }}">
+            {{ resultado }}
+        </div>
+        <div *ngIf="!juegoEmpezado">
+            <div *ngIf="!salaLlena">
+                <p class="text-danger">Esperando a que entre un rival</p>
+            </div>
+            <div *ngIf="salaLlena">
+                <div *ngIf="!listo">
+                    <p class="text-danger"><strong>Esperando a que estes listo</strong></p>
+                </div>
+                <div *ngIf="listo">
+                    <p class="text-danger">Esperando a que el rival este listo</p>
+                </div>
+            </div>
+        <div *ngIf="!listo">
+            <button class="btn btn-primary" (click)="marcarListo()">Listo para jugar</button>
+        </div>
+        <div class="{{ (usuario.listo) ? 'listo':'no-listo'}}" *ngFor="let usuario of listaUsuarios">
+            {{ usuario.nombre }}
+        </div>
+        </div>
+        <div *ngIf="juegoEmpezado">
+            <div *ngIf="turno">
+                <h4> Turno de: <span class="text-danger">{{ autorMovimiento }}</span></h4>
+            </div>
+            <div *ngIf="!turno">
+                <h4> Turno de: <span class="text-danger">{{ autorMovimiento }}</span></h4>
+            </div>
+        </div>
+        <rejilla [rejilla]="sala.tablero.rejilla" [miTurno]="turno" [nombreJugador]="nombre" (resultadoPartida)="mostrarResultadoPartida($event)"
+            (autorMovimiento)="mostrarTurno($event)"></rejilla>
+
+    </div>
+    <div *ngIf="!nombre">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 input-group">
+                <input type="text" class="form-control" #nombreInput placeholder="Nombre del jugador" />
+                <span class="input-group-btn">
+                     <button class="btn btn-danger" (click)="ponerNombre(nombreInput.value)">Conectar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

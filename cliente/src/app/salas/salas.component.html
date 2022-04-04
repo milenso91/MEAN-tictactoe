@@ -1,0 +1,7 @@
+<button class="btn btn-danger" routerLink="/crear-sala">Crear sala</button>
+
+<div class="row sala" *ngFor="let sala of salas">
+    <div class="col-md-4"><strong class="text-danger">{{sala.nombre}}</strong></div>
+    <div class="col-md-4">Jugadores: <strong>{{sala.jugadores.length}}/2</strong></div>
+    <div class="col-md-4"><button class="btn btn-primary" routerLink="/sala/{{sala.id}}" [disabled]="estaLlena(sala.jugadores.length)"> Entrar </button></div>
+</div>

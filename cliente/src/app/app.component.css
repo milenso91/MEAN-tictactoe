@@ -1,0 +1,19 @@
+h1 {
+text-align: center;
+font-size: 60px;
+font-weight: bold;
+color: white;
+padding: 20px 20px;
+width:80%;
+margin: 30px auto;
+text-shadow: 1px 0px 0px red, 0px 1px 0px red, -1px 0px 0px red,0px -1px 0px red;
+}
+.contenedor {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center; /* Debido al display:inline-block, para centrarlo completamente */
+    background: #D3D3D3; /* Old browsers */
+    padding-bottom: 20px; 
+    border-radius: 10px;
+}
+

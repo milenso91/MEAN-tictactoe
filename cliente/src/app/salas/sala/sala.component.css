@@ -1,0 +1,47 @@
+p { padding: 5px;}
+
+h4 {
+    color: blue;
+}
+
+.listo {
+    color: blue;
+    font-weight: 900;
+}
+
+.no-listo {
+    color: #666;
+}
+
+.victoria {
+  font: bold 4.5em/1.5 Bebas, sans-serif;
+  color: #5CA17C;
+  font-size: 25px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom, #26BDA6, #23A222, #232222, #26BDA6);
+  background-size: auto 250%;
+  background-position: 0 100%;
+  transition: background-position 0.5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.victoria:hover {
+  /* shift */
+  background-position: 0 0;
+}
+
+
+.derrota {
+  font: bold 4.5em/1.5 Bebas, sans-serif;
+  color: red;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.empate {
+  font: bold 4.5em/1.5 Bebas, sans-serif;
+  color: royalblue;
+  font-size: 25px;
+  text-transform: uppercase;
+}

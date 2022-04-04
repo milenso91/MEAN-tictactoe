@@ -1,0 +1,24 @@
+.casilla {
+    display: inline-block;
+    height: 142px;
+    width: 142px;
+    border: 2px solid black;
+	border-radius: 3px;
+    margin: 0;
+    vertical-align: bottom; /* Ajuste de la caja */
+    margin-right: 10px;
+    font-size: 160px;
+	background-color: #eee;
+	line-height: 160px; /* Centrado de la letra */
+	font-family: 'Press Start 2P', cursive;
+	
+}
+
+.casilla:hover {
+    cursor: pointer;
+	background-color: #ccc;
+}
+
+.fila {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,10 @@
+<form (submit)="crearSala(nombre.value)">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+        <input #nombre type="text" class="form-control" placeholder="Nombre de la sala" />
+        </div>
+        <input type="submit" [disabled]="procesando" class="btn btn-danger" value="Crear sala" />
+        <button routerLink="/" class="btn btn-default"> Volver atrás </button>
+        
+    </div>
+</form>
